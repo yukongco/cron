@@ -10,31 +10,31 @@
 package testcrontab
 
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 
-	"github.com/yukongco/cron"
+    "github.com/yukongco/cron"
 )
 
 func print1() {
-	fmt.Println("111 now time: ", time.Now().Format(Time_Format))
+    fmt.Println("111 now time: ", time.Now().Format(Time_Format))
 }
 
 func printa() {
-	fmt.Println("aaa now time: ", time.Now().Format(Time_Format))
+    fmt.Println("aaa now time: ", time.Now().Format(Time_Format))
 }
 
 func printb() {
-	fmt.Println("bbb now time: ", time.Now().Format(Time_Format))
+    fmt.Println("bbb now time: ", time.Now().Format(Time_Format))
 }
 
 func printc() {
-	fmt.Println("ccc now time: ", time.Now().Format(Time_Format))
+    fmt.Println("ccc now time: ", time.Now().Format(Time_Format))
 }
 
 func main() {
-	fmt.Println("12-22 */1")
-	cronRes := cron.New()
+    fmt.Println("12-22 */1")
+    cronRes := cron.New()
 	
 	// 不带 jobname 的定时器 
 	cronRes.AddFunc("*/2 * * * * ?", print1)
